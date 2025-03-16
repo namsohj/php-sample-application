@@ -1,4 +1,4 @@
-config
-composer.phar
-logs/*
-vendor
+#config
+#composer.phar
+#logs/*
+#vendor
