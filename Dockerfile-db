@@ -1,0 +1,11 @@
+# Usar una imagen base de MySQL
+FROM mysql:5.7
+
+# Establecer variables de entorno para la base de datos
+ENV MYSQL_DATABASE=sample
+ENV MYSQL_USER=sampleuser
+ENV MYSQL_PASSWORD=samplepass
+ENV MYSQL_ROOT_PASSWORD=rootpass
+
+# Copiar el script de inicialización de la base de datos
+COPY sql/db.sql /docker-entrypoint-initdb.d/
